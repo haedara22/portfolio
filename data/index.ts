@@ -2,7 +2,7 @@
 
 export const personalInfo = {
   name: "Haedara Salloum",  // ✅ الاسم الصحيح
-  title: "Full Stack Developer & UI/UX Designer",
+  title: "Full Stack Developer",
   email: "haedarahasan69@gmail.com",
   phone: "+963983796029",
   location: "Tartous - Elskehk badr, Syria",

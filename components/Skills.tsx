@@ -10,7 +10,11 @@ import {
   GitBranch,
   Cpu,
   Sparkles,
-  CheckCircle2
+  CheckCircle2,
+  Figma,
+  Terminal,
+  Cloud,
+  Shield
 } from "lucide-react";
 
 const Skills = () => {
@@ -19,31 +23,31 @@ const Skills = () => {
       title: "Frontend Development", 
       items: skills.frontend,
       icon: Code2,
-      color: "#0f3460"
+      color: "#2563eb"
     },
     { 
       title: "Software Development", 
       items: skills.software,
       icon: Layers,
-      color: "#1a1a2e"
+      color: "#6366f1"
     },
     { 
       title: "Databases", 
       items: skills.databases,
       icon: Database,
-      color: "#0f3460"
+      color: "#06b6d4"
     },
     { 
       title: "Methodologies", 
       items: skills.methodologies,
       icon: GitBranch,
-      color: "#e94560"
+      color: "#3b82f6"
     },
     { 
       title: "AI & Computer Science", 
       items: skills.ai,
       icon: Brain,
-      color: "#0f3460"
+      color: "#6366f1"
     },
   ];
 
@@ -63,17 +67,17 @@ const Skills = () => {
     visible: { 
       opacity: 1, 
       y: 0,
-      transition: { duration: 0.5 }
+      transition: { duration: 0.5, ease: "easeOut" }
     }
   };
 
   return (
-    <section className="py-24 px-6 max-w-7xl mx-auto relative overflow-hidden">
+    <section className="py-24 px-6 max-w-7xl mx-auto relative overflow-hidden bg-[#f8fafc]">
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#e94560]/5 blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-[#0f3460]/5 blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-[#1a1a2e]/[0.02] blur-3xl" />
+        <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#2563eb]/5 blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-[#6366f1]/5 blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-[#06b6d4]/[0.02] blur-3xl" />
       </div>
 
       <motion.div
@@ -88,29 +92,29 @@ const Skills = () => {
           <motion.div
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
-            transition={{ duration: 0.4 }}
+            transition={{ duration: 0.4, type: "spring", stiffness: 200 }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-4"
             style={{ 
-              backgroundColor: "#1a1a2e/5",
-              border: "1px solid #1a1a2e/10"
+              backgroundColor: "#eff6ff",
+              border: "1px solid #2563eb/20"
             }}
           >
-            <Sparkles size={16} style={{ color: "#e94560" }} />
-            <span className="text-sm font-medium" style={{ color: "#1a1a2e/70" }}>
+            <Sparkles size={16} style={{ color: "#2563eb" }} />
+            <span className="text-sm font-medium" style={{ color: "#2563eb" }}>
               My Expertise
             </span>
           </motion.div>
           
           <h2 
             className="text-4xl md:text-5xl font-bold"
-            style={{ color: "#1a1a2e" }}
+            style={{ color: "#0f172a" }}
           >
             Technical Skills
           </h2>
-          <p className="text-base md:text-lg mt-3" style={{ color: "#1a1a2e/60" }}>
+          <p className="text-base md:text-lg mt-3" style={{ color: "#64748b" }}>
             Technologies and tools I work with
           </p>
-          <div className="w-20 h-1 rounded-full mx-auto mt-4" style={{ backgroundColor: "#0f3460" }} />
+          <div className="w-20 h-1 rounded-full mx-auto mt-4" style={{ backgroundColor: "#2563eb" }} />
         </div>
 
         {/* Skills Grid */}
@@ -133,9 +137,9 @@ const Skills = () => {
                 <div 
                   className="relative rounded-2xl p-8 transition-all duration-500 h-full"
                   style={{ 
-                    backgroundColor: "white",
-                    border: "1px solid #1a1a2e/8",
-                    boxShadow: "0 4px 30px rgba(26, 26, 46, 0.06)"
+                    backgroundColor: "#ffffff",
+                    border: "1px solid #e2e8f0",
+                    boxShadow: "0 4px 30px rgba(15, 23, 42, 0.06)"
                   }}
                 >
                   {/* Glow Effect on Hover */}
@@ -165,7 +169,7 @@ const Skills = () => {
                       </div>
                       <h3 
                         className="text-lg font-bold"
-                        style={{ color: "#1a1a2e" }}
+                        style={{ color: "#0f172a" }}
                       >
                         {cat.title}
                       </h3>
@@ -201,7 +205,7 @@ const Skills = () => {
                           className="absolute inset-0 rounded-full opacity-0 group-hover/skill:opacity-100 transition-opacity duration-300"
                           style={{ 
                             backgroundColor: cat.color,
-                            opacity: 0.05
+                            opacity: 0.08
                           }}
                         />
                       </motion.span>
@@ -209,10 +213,10 @@ const Skills = () => {
                   </div>
 
                   {/* Footer Decoration */}
-                  <div className="mt-6 pt-4 border-t flex items-center justify-between" style={{ borderColor: "#1a1a2e/6" }}>
+                  <div className="mt-6 pt-4 border-t flex items-center justify-between" style={{ borderColor: "#e2e8f0" }}>
                     <div className="flex items-center gap-1.5">
-                      <CheckCircle2 size={12} style={{ color: "#e94560" }} />
-                      <span className="text-xs" style={{ color: "#1a1a2e/40" }}>
+                      <CheckCircle2 size={12} style={{ color: "#2563eb" }} />
+                      <span className="text-xs" style={{ color: "#94a3b8" }}>
                         Proficient
                       </span>
                     </div>
@@ -220,7 +224,7 @@ const Skills = () => {
                       {[...Array(4)].map((_, i) => (
                         <div 
                           key={i}
-                          className="w-1.5 h-1.5 rounded-full"
+                          className="w-1.5 h-1.5 rounded-full transition-all duration-300"
                           style={{ 
                             backgroundColor: i < 3 ? cat.color : `${cat.color}30`
                           }}
@@ -241,34 +245,50 @@ const Skills = () => {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="mt-16 p-8 rounded-2xl text-center"
           style={{ 
-            backgroundColor: "white",
-            border: "1px solid #1a1a2e/6",
-            boxShadow: "0 2px 20px rgba(26, 26, 46, 0.04)"
+            backgroundColor: "#ffffff",
+            border: "1px solid #e2e8f0",
+            boxShadow: "0 2px 20px rgba(15, 23, 42, 0.04)"
           }}
         >
           <div className="flex flex-wrap justify-center gap-8 md:gap-12">
             {[
-              { label: "Total Skills", value: "30+" },
-              { label: "Frameworks", value: "6+" },
-              { label: "Languages", value: "5+" },
-              { label: "Tools", value: "10+" },
-            ].map((stat, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ y: -2 }}
-                className="text-center"
-              >
-                <div 
-                  className="text-2xl md:text-3xl font-bold"
-                  style={{ color: "#0f3460" }}
+              { label: "Total Skills", value: "30+", icon: Sparkles },
+              { label: "Frameworks", value: "6+", icon: Figma },
+              { label: "Languages", value: "5+", icon: Terminal },
+              { label: "Tools", value: "10+", icon: Cloud },
+            ].map((stat, index) => {
+              const StatIcon = stat.icon;
+              return (
+                <motion.div
+                  key={index}
+                  whileHover={{ y: -2 }}
+                  className="text-center group"
                 >
-                  {stat.value}
-                </div>
-                <div className="text-sm mt-0.5" style={{ color: "#1a1a2e/50" }}>
-                  {stat.label}
-                </div>
-              </motion.div>
-            ))}
+                  <div 
+                    className="flex justify-center mb-2 transition-all duration-300 group-hover:scale-110"
+                  >
+                    <div 
+                      className="p-2 rounded-xl"
+                      style={{ 
+                        backgroundColor: "#eff6ff",
+                        color: "#2563eb"
+                      }}
+                    >
+                      <StatIcon size={18} />
+                    </div>
+                  </div>
+                  <div 
+                    className="text-2xl md:text-3xl font-bold"
+                    style={{ color: "#0f172a" }}
+                  >
+                    {stat.value}
+                  </div>
+                  <div className="text-sm mt-0.5" style={{ color: "#94a3b8" }}>
+                    {stat.label}
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </motion.div>
 
@@ -276,19 +296,20 @@ const Skills = () => {
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
+          transition={{ duration: 0.5, delay: 0.6, type: "spring", stiffness: 200 }}
           className="mt-12 flex justify-center"
         >
           <div 
-            className="inline-flex items-center gap-3 px-6 py-3 rounded-full text-sm font-medium"
+            className="inline-flex items-center gap-3 px-6 py-3 rounded-full text-sm font-medium shadow-lg transition-all duration-300 hover:scale-105"
             style={{ 
-              backgroundColor: "#1a1a2e",
-              color: "white"
+              backgroundColor: "#0f172a",
+              color: "#ffffff",
+              boxShadow: "0 8px 30px rgba(15, 23, 42, 0.25)"
             }}
           >
-            <Cpu size={18} />
+            <Cpu size={18} className="text-[#2563eb]" />
             <span>Always learning new technologies</span>
-            <span className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: "#e94560" }} />
+            <span className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: "#2563eb" }} />
           </div>
         </motion.div>
       </motion.div>
